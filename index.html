@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Asamblea Regional La Punta</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="menu-principal">
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul id="menu-list">
+            <li><a href="#bienvenida">Bienvenida</a></li>
+            <li><a href="#como-llegar">Cómo llegar</a></li>
+            <li><a href="#mapa">Mapa de Departamentos</a></li>
+            <li><a href="#alojamiento">Lista de Alojamiento</a></li>
+            <li><a href="#interes">Lugares de Interés</a></li>
+            <li><a href="#galeria">Galería de Imágenes</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Bienvenidos a la Asamblea Regional de La Punta - 2025</h1>
+    </header>
+
+    <main>
+    <section id="bienvenida">
+        <h2>Bienvenida</h2>
+        <p>Nos complace darles la bienvenida a esta asamblea Regional. Aquí encontrarás toda la información necesaria para disfrutar del evento especial.</p>
+        <h3>Fechas de la asamblea:</h3>
+        <p>La Punta 1: 21 al 23 de noviembre</p>
+        <p>La Punta 2: 28 al 28 de noviembre</p>
+    </section>
+
+    <section id="como-llegar">
+        <h2>Cómo llegar</h2>
+        <p>Información sobre transporte público, rutas y estacionamiento.</p>
+
+        <div class="videos-flex">
+            <div class="video-group">
+                <h3> Desde Quines</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/haXtL4uhfc0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-group">
+                <h3> Desde San Luis</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/haXtL4uhfc0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="mapa">
+        <h2>Mapa de Departamentos</h2>
+        <p>Mapa interactivo con las ubicaciones de los departamentos funcionales.</p>
+    </section>
+
+    <section id="alojamiento">
+        <h2>Lista de Alojamiento</h2>
+        <p><a href="https://docs.google.com/spreadsheets/d/1dL5cAqZ400bmKJ2AjLk80oaZSxgSnADcVkskfi0i7MU/edit?usp=drive_link" target="_blank">Ver lista completa de alojamientos</a></p>
+    </section>
+
+    <section id="interes">
+        <h2>Lugares de Interés</h2>
+        <p>Sitios útiles y turísticos en la ciudad anfitriona.</p>
+    </section>
+
+</main>
+
+    <footer>
+        <p>© Asamblea de los Testigos de Jehová</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu-list');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('activo');
+        });
+    </script>
+
+</body>
+</html>
