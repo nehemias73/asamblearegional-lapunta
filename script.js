@@ -31,19 +31,38 @@ map.fitBounds(bounds);
 // Puedes encontrar las coordenadas abriendo tu SVG en un editor de imágenes (como GIMP o Photoshop)
 // y viendo la posición en píxeles del punto que quieres marcar.
 
-// Ejemplo de marcador 1: Salón Principal
-const primerosAuxilios = L.marker([289, 212]).addTo(map);
-primerosAuxilios.bindPopup("<b>Primeros Auxilios</b><br>Superindentente de departamento: Arrieta.");
 
-// Ejemplo de marcador 2: Área de Cafetería
-const cafeteria = L.marker([700, 250]).addTo(map);
-cafeteria.bindPopup("<b>Área de Cafetería</b><br>Abierta de 9:00 a 18:00.");
+const alturaSVG = 496;
+const zonaComite = L.polygon([
+  [alturaSVG - 45.71, 181],
+  [alturaSVG - 76.11, 153.3],
+  [alturaSVG - 40.81, 115.8],
+  [alturaSVG - 10.91, 144]
+], {
+  color: "transparent",
+  weight: 1,
+  fillOpacity: 0.0
+}).addTo(map);
 
-// Ejemplo de marcador 3: Baños
-const banos = L.marker([200, 1000]).addTo(map);
-banos.bindPopup("<b>Baños</b>");
+zonaComite.on("click", () => {
+  L.popup()
+    .setLatLng([alturaSVG - 50, 150])
+    .setContent("<strong>Comité</strong><br>Área reservada para organizadores.")
+    .openOn(map);
+});
 
+const zona_maquillaje = L.rectangle([
+  [97.89, 337.70],
+  [126.59, 361.70]
+], {
+  color: "transparent", // sin contorno visible
+  weight: 0,
+  fillOpacity: 0.0
+}).addTo(map);
 
-// Puedes agregar todos los marcadores que necesites, ¡solo copia y pega el formato!
-const salaReunionesA = L.marker([250, 500]).addTo(map);
-salaReunionesA.bindPopup("<b>Sala de Reuniones A</b><br>Reservada para reuniones de equipo.");
+zona_maquillaje.on("click", () => {
+  L.popup()
+    .setLatLng([112.24, 349.70])
+    .setContent("<strong>Maquillaje</strong><br>Área de preparación artística.")
+    .openOn(map);
+});
