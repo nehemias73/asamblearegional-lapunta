@@ -1,0 +1,19 @@
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+/* El contenedor del mapa DEBE tener una altura definida */
+#mapa {
+    height: calc(100vh - 150px); /* Ocupa toda la altura menos 150px */
+    
+    width: 90%;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    min-height: 400px; 
+}
