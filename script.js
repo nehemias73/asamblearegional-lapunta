@@ -18,7 +18,7 @@ const bounds = [[0, 0], [height, width]];
 
 // 3. Añadir la imagen del mapa
 // Reemplaza 'mapa-convencion.svg' con el nombre exacto de tu archivo.
-const image = L.imageOverlay('mapa-convencion-b.svg', bounds).addTo(map);
+const image = L.imageOverlay('mapa-convencion.svg', bounds).addTo(map);
 
 // Hacemos que la vista del mapa se ajuste perfectamente a la imagen.
 map.setView([248, 309], 0.5); 
