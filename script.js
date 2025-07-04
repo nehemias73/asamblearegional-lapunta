@@ -248,9 +248,34 @@ const zonas = {
 
 function mostrarZona(nombreZona) {
   zonas[nombreZona].fire('click');
+  document.getElementById("menu-zonas").classList.remove("abierto");
 }
 
 function toggleMenu() {
   const menu = document.getElementById("menu-zonas");
   menu.classList.toggle("abierto");
 }
+
+const coordenadasCentro = {
+    comite: [496 - 50, 150],
+    primeros_auxilios: [496 - 142.81 - 47.5, 213.5],
+    acomodadores: [496 - 305.41 - 5, 505],
+    estacionamiento: [496 - 323.41 - 5, 555],
+    alojamiento: [496 - 341.41 - 5, 542],
+    informacion: [496 - 359.41 - 15, 558.5],
+    limpieza: [496 - 85.61 - 21, 310.5 + 27],
+    instalaciones: [496 - 221, 110],
+    guardarropa: [496 - 375, 105],
+    bautismo: [496 - 85.61 - 21, 284.8 + 12.9],
+    audio: [496 - 238.21 - 12.85, 324.9 + 24.8],
+    plataforma: [496 - 318.81 - 13.9, 309 + 40.85]
+  };
+
+ // Hacer un suave flyTo hacia esa zona (sin cambiar el zoom actual)
+const centro = coordenadasCentro[nombreZona];
+  if (centro) {
+    map.flyTo(centro, map.getZoom(), {
+      animate: true,
+      duration: 0.8 // segundos
+    });
+  }
