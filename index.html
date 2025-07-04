@@ -13,6 +13,27 @@
 
     <h1>Centro de Convenciones - Plano Interactivo</h1>
 
+    <div id="boton-menu" onclick="toggleMenu()">☰ Zonas</div>
+
+    <div id="menu-zonas" class="cerrado">
+    <h2>Zonas del Mapa</h2>
+    <ul>
+        <li onclick="mostrarZona('comite')">Comité</li>
+        <li onclick="mostrarZona('primeros_auxilios')">Primeros Auxilios</li>
+        <li onclick="mostrarZona('acomodadores')">Acomodadores</li>
+        <li onclick="mostrarZona('estacionamiento')">Estacionamiento</li>
+        <li onclick="mostrarZona('alojamiento')">Alojamiento</li>
+        <li onclick="mostrarZona('informacion')">Información</li>
+        <li onclick="mostrarZona('limpieza')">Limpieza</li>
+        <li onclick="mostrarZona('instalaciones')">Instalaciones</li>
+        <li onclick="mostrarZona('guardarropa')">Guardarropa</li>
+        <li onclick="mostrarZona('bautismo')">Bautismo</li>
+        <li onclick="mostrarZona('audio')">Audio y Video</li>
+        <li onclick="mostrarZona('plataforma')">Plataforma</li>
+    </ul>
+    </div>
+
+
     <div id="mapa"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

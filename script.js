@@ -230,3 +230,27 @@ zona_plataforma.on("click", () => {
     .setContent("<strong>Departamento de Plataforma</strong> <p><strong>Superintendente:</strong><br>Hugo Salguero<br>Contacto:<a href=https://wa.me/5492664038391>+54 9 266 403-8391</a></br><p><strong>Auxiliar:</strong><br>Rodolfo Dominguez<br>Contacto:<a href=https://wa.me/5492664747376>+54 9 266 474-7376</a></br>")
     .openOn(map);
 });
+
+const zonas = {
+  comite: zonaComite,
+  primeros_auxilios: zona_primeros_auxilios,
+  acomodadores: zona_acomodadores,
+  estacionamiento: zona_estacionamiento,
+  alojamiento: zona_alojamiento,
+  informacion: zona_informacion,
+  limpieza: zona_limpieza,
+  instalaciones: zona_instalaciones,
+  guardarropa: zona_guardarropa,
+  bautismo: zona_bautismo,
+  audio: zona_audio,
+  plataforma: zona_plataforma
+};
+
+function mostrarZona(nombreZona) {
+  zonas[nombreZona].fire('click');
+}
+
+function toggleMenu() {
+  const menu = document.getElementById("menu-zonas");
+  menu.classList.toggle("abierto");
+}
