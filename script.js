@@ -21,7 +21,7 @@ const bounds = [[0, 0], [height, width]];
 const image = L.imageOverlay('mapa-convencion.svg', bounds).addTo(map);
 
 // Hacemos que la vista del mapa se ajuste perfectamente a la imagen.
-map.setView([248, 309], 0.5); 
+map.setView([248, 309], 0); 
 
 // 4. Añadir marcadores interactivos (¡la parte divertida!)
 // Aquí es donde defines los puntos de interés.
