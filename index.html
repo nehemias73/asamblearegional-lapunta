@@ -3,47 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interactivo - Plano Asamblea Regional</title>
-    
-
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <title>Asambleas Regionales 2025 - La Punta</title>
     
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Contenedor principal: imita el estilo de #mapa pero se adapta al contenido */
+        .contenedor-seleccion {
+            background-color: #fff;
+            width: 90%;
+            max-width: 600px; /* Evita que sea demasiado ancho en PC */
+            margin: 50px auto;
+            padding: 40px 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo de los botones basado en tu #boton-menu */
+        .boton-enlace {
+            display: block; /* Hace que ocupen su propia línea */
+            background-color: #007bff; /* Tu color azul */
+            color: white;
+            text-decoration: none; /* Quita el subrayado del link */
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease, background-color 0.2s;
+            width: 80%; /* Ancho de los botones */
+        }
+
+        .boton-enlace:hover {
+            background-color: #0056b3; /* Un azul un poco más oscuro al pasar el mouse */
+            transform: translateY(-2px); /* Efecto de elevación suave */
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Centro de Convenciones - Plano Interactivo</h1>
-    <h1>LA PUNTA 2</h1>
+    <div class="contenedor-seleccion">
+        <h1>Asambleas Regionales 2025 - La Punta</h1>
 
-    <div id="boton-menu" onclick="toggleMenu()">☰ Zonas</div>
+        <a href="/la_punta_1/index.html" class="boton-enlace">
+            La Punta 1
+        </a>
 
-    <div id="menu-zonas" class="cerrado">
-    <h2>Zonas del Mapa</h2>
-    <ul>
-        <li onclick="mostrarZona('comite')">Comité</li>
-        <li onclick="mostrarZona('primeros_auxilios')">Primeros Auxilios</li>
-        <li onclick="mostrarZona('acomodadores')">Acomodadores</li>
-        <li onclick="mostrarZona('estacionamiento')">Estacionamiento</li>
-        <li onclick="mostrarZona('alojamiento')">Alojamiento</li>
-        <li onclick="mostrarZona('informacion')">Información</li>
-        <li onclick="mostrarZona('limpieza')">Limpieza</li>
-        <li onclick="mostrarZona('instalaciones')">Instalaciones</li>
-        <li onclick="mostrarZona('guardarropa')">Guardarropa</li>
-        <li onclick="mostrarZona('bautismo')">Bautismo</li>
-        <li onclick="mostrarZona('audio')">Audio y Video</li>
-        <li onclick="mostrarZona('plataforma')">Plataforma</li>
-        <li onclick="mostrarZona('transporte')">Transporte y Materiales</li>
-        <li onclick="mostrarZona('presidencia')">Presidencia</li>
-    </ul>
+        <a href="/la_punta_2/index.html" class="boton-enlace">
+            La Punta 2
+        </a>
     </div>
-
-
-    <div id="mapa"></div>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    
-    <script src="script.js"></script>
 
 </body>
 </html>
