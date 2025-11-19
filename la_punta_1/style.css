@@ -1,0 +1,76 @@
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 5px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+/* El contenedor del mapa DEBE tener una altura definida */
+#mapa {
+    height: calc(100vh - 150px); /* Ocupa toda la altura menos 150px */
+    
+    width: 95%;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    min-height: 400px; 
+}
+
+#boton-menu {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-weight: bold;
+}
+
+#menu-zonas {
+    position: fixed;
+    top: 130px;
+    right: 0;
+    width: 220px;
+    background-color: white;
+    border-left: 1px solid #ccc;
+    padding: 15px;
+    max-height: 70vh;
+    overflow-y: auto;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+#menu-zonas.abierto {
+    transform: translateX(0);
+}
+
+#menu-zonas h2 {
+    font-size: 16px;
+    margin-top: 0;
+    color: #444;
+}
+
+#menu-zonas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-zonas ul li {
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+#menu-zonas ul li:hover {
+    background-color: #e0e0e0;
+}
