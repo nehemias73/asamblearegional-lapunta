@@ -147,18 +147,9 @@ zona_estacionamientob.on("click", () => {
     .openOn(map);
 });
 
-const zona_alojamiento = L.rectangle([
-  [1683.78 - (1226.08 + 20.02), 384.1],
-  [1683.78 - 1226.08, 384.1 + 20.02]
-], {
-  color: "transparent",
-  weight: 0,
-  fillOpacity: 0.0
-}).addTo(map);
-
 const alojamiento = L.rectangle([
-  [429.61, 324.38],
-  [405.59, 425.63]
+   [542.87, 268.64],   // esquina superior izquierda
+   [562.89, 288.66]    // esquina inferior derecha
 ], {
   color: "transparent",
   weight: 0,
@@ -167,14 +158,13 @@ const alojamiento = L.rectangle([
 
 alojamiento.on("click", () => {
   L.popup()
-    .setLatLng([447.70, 394.11])
-    .setContent("<strong>Departamento de Alojamiento</strong> <p><strong>Superintendente:</strong><br>Néstor Marturano<br>Contacto:<a href=https://wa.me/5492664660312>+54 9 266 466-0312</a></br><p><strong>Auxiliar:</strong><br>Marcos Contreras<br>Contacto:<a href=https://wa.me/5492664317857>+54 9 266 431-7857</a></br>")
-    .openOn(map);
+    .setLatLng([552.88, 278.65])
+    .setContent("<strong>Departamento de Alojamiento</strong><p><strong>Superintendente:</strong><br>Néstor Marturano<br>Contacto:<a href=https://wa.me/5492664660312>+54 9 266 466-0312</a></br><p><strong>Auxiliar:</strong><br>Marcos Contreras<br>Contacto:<a href=https://wa.me/5492664317857>+54 9 266 431-7857</a><p>Javier Zupo<br>Contacto:<a href=https://wa.me/5492664950032>+54 9 266 495-0032</a></br>")    .openOn(map);
 });
 
 const alojamientob = L.rectangle([
-  [1683.78 - (1285.44), 365.08],     
-  [1683.78 - (1285.44 - 24), 466.33]
+  [1683.78 - 1114.93, 179.43],       // = [568.85, 179.43]
+  [1683.78 - (1114.93 - 24), 280.68] // = [592.85, 280.68]
 ], {
   color: "transparent",
   weight: 0,
@@ -183,9 +173,8 @@ const alojamientob = L.rectangle([
 
 alojamientob.on("click", () => {
   L.popup()
-    .setLatLng([447.70, 394.11])
-    .setContent("<strong>Departamento de Alojamiento</strong> <p><strong>Superintendente:</strong><br>Néstor Marturano<br>Contacto:<a href=https://wa.me/5492664660312>+54 9 266 466-0312</a></br><p><strong>Auxiliar:</strong><br>Marcos Contreras<br>Contacto:<a href=https://wa.me/5492664317857>+54 9 266 431-7857</a></br>")
-    .openOn(map);
+    .setLatLng([552.88, 278.65])
+    .setContent("<strong>Departamento de Alojamiento</strong><p><strong>Superintendente:</strong><br>Néstor Marturano<br>Contacto:<a href=https://wa.me/5492664660312>+54 9 266 466-0312</a></br><p><strong>Auxiliar:</strong><br>Marcos Contreras<br>Contacto:<a href=https://wa.me/5492664317857>+54 9 266 431-7857</a><p>Javier Zupo<br>Contacto:<a href=https://wa.me/5492664950032>+54 9 266 495-0032</a></br>")    .openOn(map);
 });
 
 const zona_informacion = L.rectangle([
@@ -206,8 +195,8 @@ zona_informacion.on("click", () => {
 
 
 const zona_informacionb = L.rectangle([
-   [943.55, 152.11],
-   [919.53, 240.18]
+   [1683.78 - 1318.65, 266.95],            // = [365.13, 266.95]
+   [1683.78 - (1318.65 - 42.03), 432.02]   // = [407.16, 432.02]
 ], {
   color: "transparent",
   weight: 0,
@@ -412,8 +401,8 @@ zona_transporteb.on("click", () => {
 });
 
 const zona_presidencia = L.rectangle([
-  [1683.78 - (789.15 + 54.64), 290.63],
-  [1683.78 - 789.15, 290.63 + 57.44]
+  [1683.78 - 937.91, 270.51],      // = [745.87, 270.51]
+  [1683.78 - (937.91 - 24), 368.20] // = [769.87, 368.20]
 ], {
   color: "transparent",
   weight: 1,
@@ -422,14 +411,14 @@ const zona_presidencia = L.rectangle([
 
 zona_presidencia.on("click", () => {
   L.popup()
-    .setLatLng([848.65, 319.35])
+    .setLatLng([757.87, 319.35])
     .setContent("<strong>Presidencia del programa</strong> <p><strong>Superintendente:</strong><br>Rodrigo Andrés Rizzi<br>Contacto:<a href=https://wa.me/5493416541651>+54 9 341 654-1651</a></br>")
     .openOn(map);
 });
 
 const zona_presidenciab = L.rectangle([
-  [882.62, 210.18],
-  [906.62, 307.87]
+  [1683.78 - 937.91, 270.51],      // = [745.87, 270.51]
+  [1683.78 - (937.91 - 24), 368.20] // = [769.87, 368.20]
 ], {
   color: "transparent",
   weight: 1,
@@ -438,7 +427,7 @@ const zona_presidenciab = L.rectangle([
 
 zona_presidenciab.on("click", () => {
   L.popup()
-    .setLatLng([848.65, 319.35])
+    .setLatLng([757.87, 319.35])
     .setContent("<strong>Presidencia del programa</strong> <p><strong>Superintendente:</strong><br>Rodrigo Andrés Rizzi<br>Contacto:<a href=https://wa.me/5493416541651>+54 9 341 654-1651</a></br>")
     .openOn(map);
 });
@@ -448,7 +437,7 @@ const zonas = {
   primeros_auxilios: zona_primeros_auxilios,
   acomodadores: zona_acomodadores,
   estacionamiento: zona_estacionamiento,
-  alojamiento: zona_alojamiento,
+  alojamiento: alojamiento,
   informacion: zona_informacion,
   limpieza: zona_limpieza,
   instalaciones: zona_instalaciones,
@@ -470,21 +459,6 @@ function toggleMenu() {
   menu.classList.toggle("abierto");
 }
 
-const coordenadasCentro = {
-    comite: [496 - 50, 150],
-    primeros_auxilios: [496 - 142.81 - 47.5, 213.5],
-    acomodadores: [496 - 305.41 - 5, 505],
-    estacionamiento: [496 - 323.41 - 5, 555],
-    alojamiento: [496 - 341.41 - 5, 542],
-    informacion: [496 - 359.41 - 15, 558.5],
-    limpieza: [496 - 85.61 - 21, 310.5 + 27],
-    instalaciones: [496 - 221, 110],
-    guardarropa: [496 - 375, 105],
-    bautismo: [496 - 85.61 - 21, 284.8 + 12.9],
-    audio: [496 - 238.21 - 12.85, 324.9 + 24.8],
-    plataforma: [496 - 318.81 - 13.9, 309 + 40.85],
-    presidencia: [894.62, 259.02],
-  };
 
  // Hacer un suave flyTo hacia esa zona (sin cambiar el zoom actual)
 function mostrarZona(nombreZona) {
