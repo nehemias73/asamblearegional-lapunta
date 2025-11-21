@@ -454,21 +454,7 @@ function toggleMenu() {
   menu.classList.toggle("abierto");
 }
 
-const coordenadasCentro = {
-    comite: [496 - 50, 150],
-    primeros_auxilios: [496 - 142.81 - 47.5, 213.5],
-    acomodadores: [496 - 305.41 - 5, 505],
-    estacionamiento: [496 - 323.41 - 5, 555],
-    alojamiento: [496 - 341.41 - 5, 542],
-    informacion: [496 - 359.41 - 15, 558.5],
-    limpieza: [894.62, 259.02],
-    instalaciones: [496 - 221, 110],
-    guardarropa: [496 - 375, 105],
-    bautismo: [496 - 221, 110],
-    audio: [894.62, 259.02],
-    plataforma: [894.62, 259.02],
-    presidencia: [894.62, 259.02],
-  };
+
 
  // Hacer un suave flyTo hacia esa zona (sin cambiar el zoom actual)
 function mostrarZona(nombreZona) {
